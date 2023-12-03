@@ -44,15 +44,14 @@ public class Tensor<E extends Number, T extends Iterable<E>>{
      * @param tensorB Tensor B
      * @return A linear result
      */
-    public static <E extends Number,T extends Iterable<E>> E crossProduct(Tensor<E,T> tensorA, Tensor<E,T> tensorB){
+    public static <E extends Number,T extends Iterable<E>> Iterable<E> crossProduct(Tensor<E,T> tensorA, Tensor<E,T> tensorB){
         int[] shapeTensorA = tensorA.getShape();
         int[] shapeTensorB = tensorB.getShape();
         if(shapeTensorA[shapeTensorA.length-1] == shapeTensorB[shapeTensorB.length-2]){
             throw new MatrixMultiplicationException("Invalid tensor shapes for multiplication");
         }
         ArrayList<E> result = new ArrayList<>();
-
-
+        return result;
 
     }
 

@@ -4,5 +4,5 @@ import MyTorch.tensor.Tensor;
 
 public interface DataReader {
 
-    public DataReader
+    public DataReader(){}
 }
